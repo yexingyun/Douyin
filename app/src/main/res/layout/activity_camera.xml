@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.camera.CameraActivity">
+<!--    <TextureView-->
+<!--        android:id="@+id/view_finder"-->
+<!--        android:layout_width="640dp"-->
+<!--        android:layout_height="640dp"-->
+<!--        android:visibility="gone"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent" />-->
+<!--    基于Camera2 Api的Custom版本，拍照速度更快-->
+    <com.hbzhou.open.flowcamera.CustomCameraView
+        android:id="@+id/flowCamera"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+<!--    基于CameraX库flow版本,兼容性稳定性进一步增强-->
+<!--    <com.hbzhou.open.flowcamera.FlowCameraView-->
+<!--        android:id="@+id/flowCamera"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        />-->
+<!--    <ImageButton-->
+<!--        android:id="@+id/capture_button"-->
+<!--        android:layout_width="72dp"-->
+<!--        android:visibility="gone"-->
+<!--        android:layout_height="72dp"-->
+<!--        android:layout_margin="24dp"-->
+<!--        app:srcCompat="@android:drawable/ic_menu_camera"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+</androidx.constraintlayout.widget.ConstraintLayout>

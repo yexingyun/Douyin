@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">douyin</string>
+    <string name="title_home">Home2</string>
+    <string name="title_dashboard">Dashboard3</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="empty">跳转到EmptyView</string>
+    <string name="account">账号</string>
+    <string name="password">密码</string>
+    <string name="login">登录</string>
+    <string name="account_or_password_empty">账号或密码为空</string>
+    <string name="showLoading">显示loading</string>
+
+    <string name="showItemView">showItemView</string>
+
+    <string name="sex">性别</string>
+    <string name="man">男</string>
+    <string name="article">Article</string>
+    <string name="hideLoading">隐藏loading</string>
+    <string name="collect">收藏</string>
+    <string name="finish">完成</string>
+    <string name="back">返回</string>
+
+    <string name="trimmed_done">video trim completed！</string>
+    <string name="trimming">trimming video...</string>
+    <string name="compressing">compressing video...</string>
+    <string name="compressed_done">video compression completed！</string>
+    <string name="video_shoot_tip">Drag to select the segment within %d second that you want to post！</string>
+    <string name="open_permission">Open permission</string>
+    <string name="video_record_des">To record a video, you need to give the camera and microphone access.</string>
+    <string name="recording">RECORD</string>
+
+
+</resources>

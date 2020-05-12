@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.CameraXXActivity">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextureView
+            android:layout_centerInParent="true"
+            android:id="@+id/view_finder"
+            android:rotation="180"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <!--        基于Camera2 Api的Custom版本，拍照速度更快-->
+
+        <ImageButton
+            android:id="@+id/capture_button"
+            android:layout_width="172dp"
+            android:layout_gravity="center"
+            android:visibility="visible"
+            android:layout_below="@+id/view_finder"
+            android:layout_height="172dp"
+            android:layout_margin="24dp"
+            app:srcCompat="@android:drawable/ic_menu_camera"
+            android:layout_centerHorizontal="true" />
+    </FrameLayout>
+
+
+</RelativeLayout>
