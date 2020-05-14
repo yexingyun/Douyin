@@ -50,6 +50,17 @@ public final class SDCardUtils {
         }
         return "";
     }
+    /**
+     * 返回外部存储的绝对路径，默认的外部储存路径，一般返回的是内置虚拟SD卡路径
+     *
+     * @return the path of sdcard by environment
+     */
+    public static String getDefaultCametaPath() {
+        if (Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())) {
+            return Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM).getAbsolutePath();
+        }
+        return "";
+    }
 
     /**
      * 返回SD卡是否可以使用

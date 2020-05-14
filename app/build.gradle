@@ -25,7 +25,13 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+        incremental false
+
     }
+//    jackOptions{
+//        enabled true
+//    }
+    buildToolsVersion = '28.0.3'
 }
 
 dependencies {
@@ -39,7 +45,7 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.7.1'
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
+    kapt 'com.github.bumptech.glide:compiler:4.7.1'
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation 'com.github.iknow4:android-utils-sdk:1.1.2'
     implementation 'nl.bravobit:android-ffmpeg:1.1.7'
@@ -48,6 +54,11 @@ dependencies {
     implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar'
     implementation 'com.github.xionger0520:flowcamera:V1.1.3'
     implementation 'com.flyco.dialog:FlycoDialog_Lib:1.3.2@aar'
+    // JAX-B dependencies for JDK 9+
+//    implementation "javax.xml.bind:jaxb-api:2.3.1"
+//    implementation "com.sun.xml.bind:jaxb-core:2.2.11"
+//    implementation "com.sun.xml.bind:jaxb-impl:2.2.11"
+//    implementation "javax.activation:activation:1.1.1"
 }
 repositories {
     mavenCentral()

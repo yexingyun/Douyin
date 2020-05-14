@@ -44,7 +44,7 @@ public class VideoSelectActivity extends BaseActivity {
         mCameraSurfaceViewLy = findViewById(R.id.layout_surface_view);
 //        mBtnBack.setOnClickListener(this);
         RxPermissions rxPermissions = new RxPermissions(this);
-        rxPermissions.request(Manifest.permission.READ_EXTERNAL_STORAGE).subscribe(granted -> {
+        rxPermissions.request(Manifest.permission.READ_EXTERNAL_STORAGE,Manifest.permission.WRITE_EXTERNAL_STORAGE).subscribe(granted -> {
             if (granted) { // Always true pre-M
                 mVideoLoadManager.load(this, new SimpleCallback() {
                     @Override

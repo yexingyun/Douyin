@@ -29,7 +29,10 @@ import com.zhan.ktarmor.ui.trim.VideoTrimListener;
 import com.zhan.ktarmor.ui.trim.VideoTrimmerActivity;
 import com.zhan.ktarmor.ui.trim.VideoTrimmerAdapter;
 import com.zhan.ktarmor.ui.trim.VideoTrimmerUtil;
+import com.zhan.ktarmor.utils.SDCardUtils;
 import com.zhan.ktarmor.utils.StorageUtil;
+
+import java.io.File;
 
 import iknow.android.utils.callback.SingleCallback;
 import iknow.android.utils.thread.BackgroundExecutor;
@@ -260,9 +263,17 @@ public class VideoTrimmerView extends FrameLayout implements IVideoTrimmerView {
       Toast.makeText(mContext, "视频长不足3秒,无法上传", Toast.LENGTH_SHORT).show();
     } else {
       mVideoView.pause();
+      String defaultSDCardPath = SDCardUtils.getDefaultCametaPath()+"/Camera/CupVideos";
+      File file = new File(defaultSDCardPath);
+      if (!file.exists()) {//判断文件目录是否存在
+        file.mkdirs();
+      }
+      Log.e("defaultSDCardPath","defaultSDCardPath=="+defaultSDCardPath);
+      Log.e("defaultSDCardPath","getAppDataDir=="+ StorageUtil.getAppDataDir());
       VideoTrimmerUtil.trim(mContext,
           mSourceUri.getPath(),
-          StorageUtil.getAppDataDir(),
+//          StorageUtil.getAppDataDir(),
+              defaultSDCardPath,
           mLeftProgressPos,
           mRightProgressPos,
           mOnTrimVideoListener);

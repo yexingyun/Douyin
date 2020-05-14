@@ -28,7 +28,8 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-<!--        <activity android:name=".ui.home.CameraXXActivity"></activity>-->
+        <activity android:name=".ui.Pulish.PulishActivity"></activity>
+        <!-- <activity android:name=".ui.home.CameraXXActivity"></activity> -->
         <activity android:name=".ui.camera.CameraActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

@@ -5,6 +5,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -13,7 +14,11 @@ import androidx.fragment.app.FragmentActivity;
 
 import com.zhan.ktarmor.R;
 import com.zhan.ktarmor.databinding.ActivityVideoTrimBinding;
+import com.zhan.ktarmor.ui.Pulish.PulishActivity;
 import com.zhan.mvvm.base.BaseActivity;
+
+import java.io.File;
+import java.io.FileNotFoundException;
 
 
 /**
@@ -74,17 +79,21 @@ public class VideoTrimmerActivity extends BaseActivity implements VideoTrimListe
 
     @Override
     public void onStartTrim() {
-        showToast(getResources().getString(R.string.trimming)+"");
+//        showToast(getResources().getString(R.string.trimming)+"");
         buildDialog(getResources().getString(R.string.trimming)).show();
     }
 
     @Override
     public void onFinishTrim(String in) {
-        sendBroadcast(new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE,Uri.parse(in)));
-        showToast(in);
+        // 最后通知图库更新
+        this.sendBroadcast(new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, Uri.parse("file://" + in)));
+
         if (mProgressDialog.isShowing()) mProgressDialog.dismiss();
         Log.e(TAG, "path=====" + in);
-        finish();
+        Log.e(TAG, "defaultSDCardPath=====" + in);
+        startActivity(new Intent(this, PulishActivity.class));
+//        start
+//        finish();
         //TODO: please handle your trimmed video url here!!!
         //String out = StorageUtil.getCacheDir() + File.separator + COMPRESSED_VIDEO_FILE_NAME;
         //buildDialog(getResources().getString(R.string.compressing)).show();
