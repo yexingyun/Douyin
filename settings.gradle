@@ -1,1 +1,2 @@
 include ':app', ':mvvm'
+include ':openCVLibrary3410'

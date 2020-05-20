@@ -32,6 +32,8 @@ import com.zhan.ktarmor.account.data.response.HomeRsp;
 import com.zhan.ktarmor.common.api.API;
 //import com.zhan.ktarmor.ui.camera.CameraActivity;
 import com.zhan.ktarmor.ui.camera.CameraActivity;
+//import com.zhan.ktarmor.ui.camera.OpenCVActivity;
+import com.zhan.ktarmor.ui.camera.OpenCVActivity;
 import com.zhan.ktarmor.ui.select.VideoSelectActivity;
 import com.zhan.mvvm.mvvm.LifecycleFragment;
 import com.zhan.mvvm.utils.ThreadPoolProxyFactory;
@@ -151,7 +153,7 @@ public class HomeFragment extends LifecycleFragment<HomeViewModel> implements Vi
         ActionSheetDialog();
     }
     private void ActionSheetDialog() {
-        final String[] stringItems = {"打开相机", "图库选择"};
+        final String[] stringItems = {"打开相机", "图库选择","opencv"};
         final ActionSheetDialog dialog = new ActionSheetDialog(getContext(), stringItems, null);
         dialog.title("")//
                 .isTitleShow(false)
@@ -163,6 +165,8 @@ public class HomeFragment extends LifecycleFragment<HomeViewModel> implements Vi
                 startActivity(new Intent(getContext(), CameraActivity.class));
             }else if (stringItems[position].equals("图库选择")){
                 startActivity(new Intent(getContext(), VideoSelectActivity.class));
+            }else if (stringItems[position].equals("opencv")){
+                startActivity(new Intent(getContext(), OpenCVActivity.class));
             }
             dialog.dismiss();
         });

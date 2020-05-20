@@ -4,11 +4,29 @@
     package="com.zhan.ktarmor">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+<!--    <uses-feature-->
+<!--        android:name="android.hardware.camera"-->
+<!--        android:required="false" />-->
+<!--    <uses-feature-->
+<!--        android:name="android.hardware.camera.autofocus"-->
+<!--        android:required="false" />-->
+<!--    <uses-feature-->
+<!--        android:name="android.hardware.camera.front"-->
+<!--        android:required="false" />-->
+<!--    <uses-feature-->
+<!--        android:name="android.hardware.camera.front.autofocus"-->
+<!--        android:required="false" />-->
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
-    <uses-feature android:name="android.hardware.camera.autofocus" />
+
     <uses-feature android:name="android.hardware.location.gps" />
-    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        tools:ignore="DuplicateUsesFeature" />
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.FLASHLIGHT" />
@@ -25,16 +43,17 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        tools:replace="android:allowBackup,android:icon"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
-        tools:ignore="GoogleAppIndexingWarning">
+        tools:ignore="GoogleAppIndexingWarning"
+      >
         <activity android:name=".ui.Pulish.PulishActivity"></activity>
         <!-- <activity android:name=".ui.home.CameraXXActivity"></activity> -->
         <activity android:name=".ui.camera.CameraActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -44,6 +63,13 @@
         <activity android:name=".list.ArticleActivity" />
         <activity android:name=".ui.select.VideoSelectActivity" />
         <activity android:name=".ui.trim.VideoTrimmerActivity" />
-    </application>
+        <activity
+            android:name="com.zhan.ktarmor.ui.camera.OpenCVActivity"
 
+            />
+<!--        android:screenOrientation="landscape"-->
+<!--        tools:ignore="LockedOrientationActivity"-->
+    </application>
 </manifest>
+
+

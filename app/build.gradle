@@ -4,11 +4,13 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
+    buildToolsVersion = '28.0.3'
+
     defaultConfig {
         applicationId "com.zhan.ktarmor"
         minSdkVersion 21
-        targetSdkVersion 28
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -31,7 +33,11 @@ android {
 //    jackOptions{
 //        enabled true
 //    }
-    buildToolsVersion = '28.0.3'
+//    sourceSets {
+//        main {
+//            jniLibs.srcDirs = ['libs']
+//        }
+//    }
 }
 
 dependencies {
@@ -54,11 +60,7 @@ dependencies {
     implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar'
     implementation 'com.github.xionger0520:flowcamera:V1.1.3'
     implementation 'com.flyco.dialog:FlycoDialog_Lib:1.3.2@aar'
-    // JAX-B dependencies for JDK 9+
-//    implementation "javax.xml.bind:jaxb-api:2.3.1"
-//    implementation "com.sun.xml.bind:jaxb-core:2.2.11"
-//    implementation "com.sun.xml.bind:jaxb-impl:2.2.11"
-//    implementation "javax.activation:activation:1.1.1"
+    implementation project(':openCVLibrary3410')
 }
 repositories {
     mavenCentral()
