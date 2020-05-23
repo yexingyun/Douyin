@@ -56,4 +56,6 @@ dependencies {
 
     // KtWing
     api 'com.github.hyzhan43:KtWing:1.0.2'
+
+    api 'com.readystatesoftware.systembartint:systembartint:1.0.3'
 }

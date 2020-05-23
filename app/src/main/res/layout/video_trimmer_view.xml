@@ -15,7 +15,7 @@
       android:gravity="center"
       >
 
-    <com.zhan.ktarmor.view.ZVideoView
+    <com.yxe.ktarmor.view.ZVideoView
         android:id="@+id/video_loader"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

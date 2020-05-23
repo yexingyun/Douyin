@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!--Android/data/包名/-->
+    <external-path path="Android/data/com.yxe.ktarmor.systemvediorecord/" name="files_root"/>
+    <external-path path="." name="com.yxe.ktarmor.systemvediorecord" />
+</paths>

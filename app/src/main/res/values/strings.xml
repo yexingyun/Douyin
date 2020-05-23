@@ -6,7 +6,7 @@
     <string name="empty">跳转到EmptyView</string>
     <string name="account">账号</string>
     <string name="password">密码</string>
-    <string name="login">登录</string>
+    <string name="login">登    录</string>
     <string name="account_or_password_empty">账号或密码为空</string>
     <string name="showLoading">显示loading</string>
 
@@ -16,7 +16,7 @@
     <string name="man">男</string>
     <string name="article">Article</string>
     <string name="hideLoading">隐藏loading</string>
-    <string name="collect">收藏</string>
+    <string name="register">没有账号？点我一键登录</string>
     <string name="finish">完成</string>
     <string name="back">返回</string>
 
@@ -28,6 +28,8 @@
     <string name="open_permission">Open permission</string>
     <string name="video_record_des">To record a video, you need to give the camera and microphone access.</string>
     <string name="recording">RECORD</string>
+    <string name="username">用户名</string>
+    <string name="phone">手机号</string>
 
 
 </resources>

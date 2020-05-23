@@ -19,7 +19,7 @@
         android:scaleType="centerInside"
         android:src="@drawable/ic_frown" />
 
-    <com.zhan.mvvm.widget.LoadingView
+    <com.yxe.mvvm.widget.LoadingView
         android:id="@+id/mLoading"
         android:layout_width="@dimen/len_80"
         android:layout_height="@dimen/len_80"

@@ -13,10 +13,11 @@
     <!-- Base application theme. -->
     <style name="AppTheme2" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">false</item>
+        <!--显示虚拟按键，并腾出空间-->
+        <item name="android:windowBackground">@drawable/bgxml_splash</item>
     </style>
     <declare-styleable name="TitleBar">
         <!-- 标题 -->
